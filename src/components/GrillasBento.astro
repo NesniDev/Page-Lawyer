@@ -1,0 +1,72 @@
+---
+import GrillasBentoItem from "./GrillasBentoItem.astro";
+---
+
+<section
+  class="w-full max-w-[1400px] grid grid-cols-10 auto-rows-[500px] gap-5 mx-auto px-10"
+>
+  <GrillasBentoItem class="col-span-10 md:col-span-4" title="A">
+    <div
+      slot="image"
+      class="absolute left-0 top-0 bottom-0 object-cover object-center w-full
+      h-full group-hover:scale-110 group-hover:bg-[#111e31] transition-scale duration-1000 
+      ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-transparent -z-10" 
+      style="background-image: url('/public/fotoPersonal.webp');"
+    >
+    </div>
+    <p slot="content" class="max-w-xl">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates
+      distinctio autem harum architecto, eius sunt, magni asperiores animi
+      excepturi veritatis nulla reprehenderit fugiat dignissimos repellendus.
+      Recusandae porro eaque assumenda ad?
+    </p>
+  </GrillasBentoItem>
+  <GrillasBentoItem class="col-span-10 md:col-span-6" title="B" subtitle="BB" > 
+    <div
+      slot="image"
+      class="absolute left-0 top-0 bottom-0 object-cover object-center w-full
+      h-full group-hover:scale-110 group-hover:bg-[#111e31] transition-scale duration-1000 
+      ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-transparent -z-10" 
+      style="background-image: url('/public/mountain.jpg');"
+    >
+</div>  
+    <p slot="content" class="max-w-xl">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates
+        distinctio autem harum architecto, eius sunt, magni asperiores animi
+        excepturi veritatis nulla reprehenderit fugiat dignissimos repellendus.
+        Recusandae porro eaque assumenda ad?
+      </p>
+  </GrillasBentoItem>
+  <GrillasBentoItem class="col-span-10 md:col-span-6" title="C" subtitle="CCC" > 
+    <div
+      slot="image"
+      class="absolute left-0 top-0 bottom-0 object-cover object-center w-full
+      h-full group-hover:scale-110 group-hover:bg-[#111e31] transition-scale duration-1000 
+      ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-transparent -z-10" 
+      style="background-image: url('/public/mountain.jpg');"
+    >
+    </div>
+    <p slot="content" class="max-w-xl">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates
+        distinctio autem harum architecto, eius sunt, magni asperiores animi
+        excepturi veritatis nulla reprehenderit fugiat dignissimos repellendus.
+        Recusandae porro eaque assumenda ad?
+      </p>
+  </GrillasBentoItem>
+  <GrillasBentoItem class="col-span-10 md:col-span-4" title="D" subtitle="DDDD" > 
+    <div
+      slot="image"
+      class="absolute left-0 top-0 bottom-0 object-cover object-center w-full
+      h-full group-hover:scale-110 group-hover:bg-[#111e31] transition-scale duration-1000 
+      ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-transparent -z-10" 
+      style="background-image: url('/public/mountain.jpg');"
+    >
+    </div>
+    <p slot="content" class="max-w-xl">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates
+        distinctio autem harum architecto, eius sunt, magni asperiores animi
+        excepturi veritatis nulla reprehenderit fugiat dignissimos repellendus.
+        Recusandae porro eaque assumenda ad?
+      </p>
+  </GrillasBentoItem>
+</section>

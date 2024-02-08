@@ -1,9 +1,10 @@
 ---
-import Header from '../components/Header.astro';
-import "@fontsource-variable/onest"
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import "@fontsource-variable/onest";
 interface Props {
-	title: string;
-	description: string;
+  title: string;
+  description: string;
 }
 
 const { title, description } = Astro.props;
@@ -11,34 +12,65 @@ const { title, description } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
-		<Header/>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/logo.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="">
+    <div class="fixed left-0 top-0 -z-10 h-full w-full ">
+		<div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+			<div class="absolute inset-0 -z-10 h-full w-full bg-[va] [background:radial-gradient(125%_125%_at_50%_10%,#f9f6ed_45%,#e3ac20_100%)]"></div>
+			<!-- <div class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_900px_at_0%_400px,#e3ac20,transparent)]"></div> -->
+		</div>
+		<!-- <div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"> -->
+			<!-- <div class="relative h-full w-full bg-slate-950"><div class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_1000px_at_50%_200px,#d5b66f,transparent)]"></div></div> -->
+		<!-- </div> -->
+	</div>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
 </html>
 <style is:global>
-	:root {
-		color-scheme: light dark;
-	}
-	html {
-		font-family: "Onest Variable", system-ui, sans-serif;
+	@import url('https://fonts.cdnfonts.com/css/caviar-dreams');
+  :root {
+    color-scheme: light dark;
+	--background: #f9f6ed;
+	--letra:#f1e9d0;
+	--a: #CAA152;
+	--titulos:#7f4f29;
+	--badge:#ff790c;
+  }
+  html {
+    font-family: "Caviar Dreams", system-ui, sans-serif;
+    scroll-behavior: smooth;
+}
 
-	}
+body {
+	/* color: #111e31; */
 	
-	body{
-		background: #050505;
-		display: flex;
-		flex-direction: column;
-		height: 100vh;
-	}
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
+  @media (prefers-reduced-motion) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    body {
+		color: var(--letra);
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    body {
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
 </style>

@@ -1,0 +1,43 @@
+---
+interface Props {
+  number?: string;
+  content?: string;
+  image?: string;
+}
+
+const SERVICES = [
+  {
+    number: "3",
+    image: "/public/anios.svg",
+    content: "Años de experiencia",
+  },
+  {
+    number: "1k",
+    image: "/public/seguidores.svg",
+    content: "Seguidores en redes sociales",
+  },
+  {
+    number: "500",
+    image: "/public/trabajos.svg",
+    content: "Servicios realizados",
+  }
+];
+---
+
+<section class="">
+  <h3 class="text-center text-4xl mb-12 text-[#5c3827] font-bold">Cantidad de servicios realizados</h3>
+  <div class="flex flex-row justify-center gap-24">
+    {
+      SERVICES.map((service) => (
+        <article class="flex flex-col text-xl text-[#f1e9d0]">
+          <div class="flex flex-row items-center gap-5 justify-center mb-2">
+
+            <p class="text-4xl">+{service.number}</p>
+            <img class="size-14" src={service.image} alt="Imagen de servicios" />
+          </div>
+          <p class="font-semibold">{service.content}</p>
+        </article>
+      ))
+    }
+  </div>
+</section>

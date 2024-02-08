@@ -1,7 +1,35 @@
+---
+import ExperienciaUnitaria from "./ExperienciaUnitaria.astro";
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700">                  
-    <li class="mb-10 ms-6">            
-        
-    </li>
+const EXPERIENCIA = [
+  {
+    title: "Caso 1",
+    date: "Released on January 13th, 2022",
+    description:
+      "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
+    link: "#"
+  },
+  {
+    title: "Caso 2",
+    date: "February 2023",
+    description: "lorem ipsum dolor sit amet, consect et ",
+    link: "#"
+  },
+  {
+    title: "Caso 3",
+    date: "February 2024",
+    description: "lorem ipsum dolor sit amet, consect et ",
+    link: "#"
+  },
+];
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-4">  
+{
+    EXPERIENCIA.map(experiencia => (
+        <li class="mb-10 ms-6 ml-9">
+            <ExperienciaUnitaria {...experiencia} />
+        </li>  
+    ))
+}
+
 </ol>
-

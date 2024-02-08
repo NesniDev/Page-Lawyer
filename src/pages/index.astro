@@ -6,49 +6,82 @@ import SocialMedia from "../components/SocialMedia.astro";
 import FacebookIcon from "../icons/Facebook.astro";
 import InstagramIcon from "../icons/Instagram.astro";
 import MailIcon from "../icons/Mail.astro";
+import MaletaIcon from "../icons/Maleta.astro";
+import ExperienciaTotal from "../components/ExperienciaTotal.astro";
+import Contenedor from "../components/Contenedor.astro";
+import AboutMe from "../components/AboutMe.astro";
+import GrillasBento from "../components/GrillasBento.astro";
+import Services from "../components/Services.astro";
 ---
 
 <Layout
   title="Sandra Liliana Alba Mendieta - Abogada Litigante"
-  description="¡Protege tus derechos laborales con la ayuda de un experto! Sandra Liliana Alba, abogada especializada en Derecho Laboral, 
-  ofrece asesoramiento legal integral y representación en casos de discriminación, salarios impagos, despidos injustificados y más.
-  ¡Contacta ahora para una consulta personalizada!"
+  description="¡Protege tus derechos laborales con la ayuda de un experto! Sandra Liliana Alba, abogada especializada en Derecho Laboral, ofrece asesoramiento legal integral y representación en casos de discriminación, salarios impagos, despidos injustificados y más. ¡Contacta ahora para una consulta personalizada!"
 >
-  <main>
-    <section class="w-full lg:w-[1000px] mx-auto py-32">
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-4 pb-5">
-        Hola, Soy Sandra Alba <div class="flex justify-center items-center">
-          <BadgeButton>Abogada - Contáctame</BadgeButton>
+<main class="px-5">
+    <Contenedor class="">
+      <div class="grid grid-cols-10 gap-x-10 ml-1">
+        <div class="col-span-7 auto-rows-auto">
+          <h1
+            class="text-[#351d13]/60 text-xl md:text-3xl xl:text-5xl font-bold flex flex-row gap-4 pb-5"
+          >Dra. Sandra Alba<div class="flex justify-center items-center">
+              <BadgeButton>Abogada Litigante</BadgeButton>
+            </div>
+          </h1>
+          <p
+            class="text-pretty text-sm md:text-lg xl:text-xl opacity-80 text-black/80 font-extralight text-justify "
+          >
+            Me enorgullece presentarme como abogada especializada en Derecho
+            Laboral. Con una profunda pasión por la justicia y un compromiso
+            inquebrantable con los derechos de los trabajadores. Creo firmemente en
+            la importancia de equilibrar el poder entre empleadores y empleados, y
+            trabajo incansablemente para asegurar que mis clientes reciban la
+            representación legal experta que merecen.
+          </p>
+          <nav
+            class="flex justify-center md:justify-normal gap-1.5 lg:gap-4 flex-row py-4 flex-wrap"
+          >
+            <SocialMedia href="/">
+              <FacebookIcon class="size-4 md:size-5" />
+              <span class="text-[12px] text-black/80">Facebook</span>
+            </SocialMedia>
+            <SocialMedia href="/">
+              <LinkedinIcon class="size-4 md:size-5" />
+              <span class="text-[12px] text-black/80">Linkedin</span>
+            </SocialMedia>
+            <SocialMedia href="/">
+              <InstagramIcon class="size-4 md:size-5" />
+              <span class="text-[12px] text-black/80">Instagram</span>
+            </SocialMedia>
+            <SocialMedia href="/">
+              <MailIcon class="size-4 md:size-5" />
+              <span class="text-[12px] text-black/80"> sandraliliana@gmail.com</span>
+            </SocialMedia>
+          </nav>
         </div>
-      </h1>
-      <h2 class="text-[17px] opacity-80 text-wrap">
-        Me enorgullece presentarme como abogada especializada en Derecho
-        Laboral. Con una profunda pasión por la justicia y un compromiso
-        inquebrantable con los derechos de los trabajadores, me dedico a
-        proporcionar asesoramiento legal integral y representación en una amplia
-        gama de asuntos laborales.
+        <div class="col-span-3 auto-rows-auto max-w-full">
+          <img class="-mt-8 rounded-full " src="/public/fotoPrincipal.jpg" alt="">
+        </div>
+      </div>
+    </Contenedor>
+    <Contenedor id="experiencia">
+      <h2
+        class="text-2xl md:text-4xl font-semibold mb-8 flex flex-row items-center gap-4"
+      >
+        <MaletaIcon class="size-7" />
+        Experiencia Laboral
       </h2>
-      <nav class="flex gap-x-4 flex-row py-4">
-        <SocialMedia href="/">
-          <FacebookIcon class="size-5" />
-          <span class="text-[12px]">Facebook</span>
-        </SocialMedia>
-        <SocialMedia href="/">
-          <LinkedinIcon class="size-5" />
-          <span class="text-[12px]">Linkedin</span>
-        </SocialMedia>
-        <SocialMedia href="/">
-          <InstagramIcon class="size-5" />
-          <span class="text-[12px]">Instagram</span>
-        </SocialMedia>
-        <SocialMedia href="/">
-          <MailIcon class="size-5" />
-          <span class="text-[12px]"> sandraliliana@gmail.com</span>
-        </SocialMedia>
-      </nav>
-    </section>
+      <ExperienciaTotal />
+    </Contenedor>
+    <Contenedor>
+      <Services/>
+    </Contenedor>
+    <Contenedor>
+      <GrillasBento />
+    </Contenedor>
+    <Contenedor>
+      <AboutMe />
+    </Contenedor>
+    
   </main>
-  
 </Layout>
-
-<style></style>
