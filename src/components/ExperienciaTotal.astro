@@ -3,33 +3,40 @@ import ExperienciaUnitaria from "./ExperienciaUnitaria.astro";
 
 const EXPERIENCIA = [
   {
-    title: "Caso 1",
-    date: "Released on January 13th, 2022",
+    title: "Abogada Litigante y Asesora en área Laboral.",
+    date: "Inicio Marzo 6 de 2020 a la fecha.",
     description:
-      "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
-    link: "#"
+      "Con una sólida trayectoria como abogada litigante y asesora especializada en derecho laboral, he brindado representación legal tanto a empleadores como a trabajadores en una amplia gama de casos laborales.",
+  },
+
+  {
+    title: "Cobro Coactivo Secretaria de Transito de Chiquinquirá",
+    date: "2019",
+    description:
+      "Como responsable del cobro coactivo en la Secretaría de Tránsito de Chiquinquirá, he gestionado eficientemente procesos de cobranza de multas y sanciones viales, garantizando el cumplimiento de las normativas legales y procedimientos administrativos. ",
   },
   {
-    title: "Caso 2",
-    date: "February 2023",
-    description: "lorem ipsum dolor sit amet, consect et ",
-    link: "#"
+    title: "Abogada Litigante y Asesora en área Laboral.",
+    date: "Diciembre 3 de 2019- 1 de julio de 2021",
+    description:
+      "Brindar asesoría, acompañamiento en asuntos y procesos laborales de única instancia.",
   },
   {
-    title: "Caso 3",
-    date: "February 2024",
-    description: "lorem ipsum dolor sit amet, consect et ",
-    link: "#"
+    title:
+      " Asistente y/o dependiente judicial de Abogado Laboralista de Calle 18 No.8 -70 Chiquinquirá.Avenidas Jiménez No. 4-90 of. 503-504",
+    date: "Junio 15 de 2015 – Diciembre 2 de 2019.",
+    description:
+      "Control de los procesos Laborales para el cumplimiento de los objetivos de la Oficina de Abogados.",
   },
 ];
 ---
-<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-4">  
-{
-    EXPERIENCIA.map(experiencia => (
-        <li class="mb-10 ms-6 ml-9">
-            <ExperienciaUnitaria {...experiencia} />
-        </li>  
-    ))
-}
 
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-5">
+  {
+    EXPERIENCIA.map((experiencia) => (
+      <li class="mb-10 ms-6 ml-9">
+        <ExperienciaUnitaria {...experiencia} />
+      </li>
+    ))
+  }
 </ol>

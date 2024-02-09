@@ -1,29 +1,35 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import BadgeButton from "../components/Bagde.astro";
-import LinkedinIcon from "../icons/Linkedin.astro";
+import WhatsappIcon from "../icons/Whatsapp.astro";
 import SocialMedia from "../components/SocialMedia.astro";
 import FacebookIcon from "../icons/Facebook.astro";
 import InstagramIcon from "../icons/Instagram.astro";
 import MailIcon from "../icons/Mail.astro";
-import MaletaIcon from "../icons/Maleta.astro";
 import ExperienciaTotal from "../components/ExperienciaTotal.astro";
 import Contenedor from "../components/Contenedor.astro";
 import AboutMe from "../components/AboutMe.astro";
 import GrillasBento from "../components/GrillasBento.astro";
 import Services from "../components/Services.astro";
+import Direccion from "../components/Direccion.astro";
 ---
 
 <Layout
   title="Sandra Liliana Alba Mendieta - Abogada Litigante"
   description="¡Protege tus derechos laborales con la ayuda de un experto! Sandra Liliana Alba, abogada especializada en Derecho Laboral, ofrece asesoramiento legal integral y representación en casos de discriminación, salarios impagos, despidos injustificados y más. ¡Contacta ahora para una consulta personalizada!"
 >
-<main class="px-5">
+<main class="relative px-5">
+  <a 
+  href=https://wa.link/1nid20"
+  class="fixed ">
+
+    <WhatsappIcon class="absolute size-14 top-[510px] left-[1425px] rounded-full bg-white shadow-xl shadow-green-500/70 hover:-translate-y-3 transition-all duration-200"/>
+  </a>
     <Contenedor class="">
-      <div class="grid grid-cols-10 gap-x-10 ml-1">
-        <div class="col-span-7 auto-rows-auto">
+      <div class="flex flex-col lg:grid lg:grid-cols-10 lg:gap-x-20 ml-1">
+        <div class="flex flex-col sm:col-span-10 m-auto lg:col-span-6 auto-rows-auto">
           <h1
-            class="text-[#351d13]/60 text-xl md:text-3xl xl:text-5xl font-bold flex flex-row gap-4 pb-5"
+            class="text-[#351d13]/60 text-xl md:text-3xl xl:text-5xl font-bold flex flex-row gap-4 pb-5 justify-center"
           >Dra. Sandra Alba<div class="flex justify-center items-center">
               <BadgeButton>Abogada Litigante</BadgeButton>
             </div>
@@ -39,36 +45,33 @@ import Services from "../components/Services.astro";
             representación legal experta que merecen.
           </p>
           <nav
-            class="flex justify-center md:justify-normal gap-1.5 lg:gap-4 flex-row py-4 flex-wrap"
+            class="flex justify-center gap-1.5 lg:gap-4 flex-row py-4 flex-wrap"
           >
             <SocialMedia href="/">
-              <FacebookIcon class="size-4 md:size-5" />
+              <FacebookIcon class="size-4 lg:size-5" />
               <span class="text-[12px] text-black/80">Facebook</span>
             </SocialMedia>
-            <SocialMedia href="/">
-              <LinkedinIcon class="size-4 md:size-5" />
-              <span class="text-[12px] text-black/80">Linkedin</span>
-            </SocialMedia>
+            
             <SocialMedia href="/">
               <InstagramIcon class="size-4 md:size-5" />
               <span class="text-[12px] text-black/80">Instagram</span>
             </SocialMedia>
             <SocialMedia href="/">
               <MailIcon class="size-4 md:size-5" />
-              <span class="text-[12px] text-black/80"> sandraliliana@gmail.com</span>
+              <span class="text-[12px] text-black/80"> sandraliliana@hotmail.com</span>
             </SocialMedia>
           </nav>
         </div>
-        <div class="col-span-3 auto-rows-auto max-w-full">
-          <img class="-mt-8 rounded-full " src="/public/fotoPrincipal.jpg" alt="">
+        <div class="col-span-10 m-auto lg:col-span-4 auto-rows-auto w-72 max-w-full" >
+          <img class="lg:-mt-8 rounded-full" src="/public/fotoPrincipal.jpg" alt="">
         </div>
       </div>
     </Contenedor>
     <Contenedor id="experiencia">
       <h2
-        class="text-2xl md:text-4xl font-semibold mb-8 flex flex-row items-center gap-4"
+        class="text-4xl md:text-4xl font-semibold mb-8 flex flex-row justify-center items-center gap-4 text-[#351d13]"
       >
-        <MaletaIcon class="size-7" />
+        <!-- <MaletaIcon class="size-7" /> -->
         Experiencia Laboral
       </h2>
       <ExperienciaTotal />
@@ -80,7 +83,13 @@ import Services from "../components/Services.astro";
       <GrillasBento />
     </Contenedor>
     <Contenedor>
+      <h2
+      class="text-4xl md:text-4xl font-semibold mb-8 flex flex-row justify-center items-center gap-4 text-[#351d13]"
+      >Acerca de mi</h2>
       <AboutMe />
+    </Contenedor>
+    <Contenedor>
+      <Direccion/>
     </Contenedor>
     
   </main>
