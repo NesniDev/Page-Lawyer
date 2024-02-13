@@ -7,7 +7,7 @@ interface Props {
 
 const SERVICES = [
   {
-    number: "3",
+    number: "8",
     image: "anios.svg",
     content: "Años de experiencia",
   },
@@ -17,7 +17,7 @@ const SERVICES = [
     content: "Seguidores en redes sociales",
   },
   {
-    number: "500",
+    number: "180",
     image: "trabajos.svg",
     content: "Servicios realizados",
   }
@@ -26,7 +26,7 @@ const SERVICES = [
 
 <section class="">
   <h3 class="text-center text-4xl mb-12 text-[#351d13] font-bold">Cantidad de servicios realizados</h3>
-  <div class="flex flex-row justify-center gap-24 font-semibold">
+  <div class="flex flex-col md:flex-row justify-center items-center gap-24 font-semibold">
     {
       SERVICES.map((service) => (
         <article class="flex flex-col text-xl text-[#351d13]">

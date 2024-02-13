@@ -1,11 +1,52 @@
 ---
+import Menu from "../icons/Menu.astro";
 ---
-<header class="mx-auto flex flex-col md:flex-row justify-between items-center w-full lg:w-[1000px] mt-7">
-    <img class="size-32 xl:size-28 flex justify-end" src="logo.png" alt="Foto Logo Página">
-    <nav class="flex flex-row gap-x-2 xl:gap-x-5 font-semibold text-xs lg:text-base text-[#CAA152]">
-        <a class="py-2 px-3 rounded-md hover:bg-yellow-500/70 hover:text-slate-800 font-semibold hover:-translate-y-1 transition-all delay-150 ease-in-out " href="/">Inicio</a>
-        <a class="py-2 px-3 rounded-md hover:bg-yellow-500/70 hover:text-slate-800 font-semibold hover:-translate-y-1 transition-all delay-100 ease-in-out " href="/#Acerca de mi">Acerca de mi</a>
-        <a class="py-2 px-3 rounded-md hover:bg-yellow-500/70 hover:text-slate-800 font-semibold hover:-translate-y-1 transition-all delay-100 ease-in-out " href="/#experiencia">Experiencia</a>
-        <a class="py-2 px-3 rounded-md hover:bg-yellow-500/70 hover:text-slate-800 font-semibold hover:-translate-y-1 transition-all delay-100 ease-in-out " href="/contacto">Contacto</a>
-    </nav>
-</header> 
+
+<header
+  class="relative md:py-0 mx-auto flex flex-row justify-between items-center w-full xl:w-[1000px] mt-0 md:mt-9 px-8"
+>
+  <img
+    class="size-32 xl:size-28"
+    src="logo.png"
+    alt="Foto Logo Página"
+  />
+  <nav
+    id="menu"
+    class="z-50 text-4xl md:text-base absolute h-full top-0 left-0 right-0 bg-black py-96 md:py-0 md:static
+    items-center justify-center md:bg-transparent md:ml-36 lg:ml-80
+    hidden md:block flex flex-col md:flex-row gap-2 xl:gap-x-5 
+    font-semibold lg:text-base text-[#CAA152] bg-gradient-to-r from-slate-800 md:from-transparent opacity-85"
+  >
+    <a
+      class="py-2 px-3 rounded-md hover:bg-yellow-500/70 hover:text-slate-800 font-semibold hover:-translate-y-1 transition-all delay-150 ease-in-out"
+      href="/">Inicio</a
+    >
+    <a
+      class="py-2 px-3 rounded-md hover:bg-yellow-500/70 hover:text-slate-800 font-semibold hover:-translate-y-1 transition-all delay-100 ease-in-out"
+      href="/#Acerca de mi">Acerca de mi</a
+    >
+    <a
+      class="py-2 px-3 rounded-md hover:bg-yellow-500/70 hover:text-slate-800 font-semibold hover:-translate-y-1 transition-all delay-100 ease-in-out"
+      href="/#experiencia">Experiencia</a
+    >
+    <a
+      class="py-2 px-3 rounded-md hover:bg-yellow-500/70 hover:text-slate-800 font-semibold hover:-translate-y-1 transition-all delay-100 ease-in-out"
+      href="/contacto">Contacto</a
+    >
+  </nav>
+  <button class="button z-50">
+    <Menu class="w-10 md:hidden block" />
+  </button>
+</header>
+
+<script>
+  const menu = document.querySelector("#menu");
+  const boton = document.querySelector(".button");
+
+  boton.addEventListener(
+    "click",
+    () => {
+      menu.classList.toggle("hidden");
+    }
+  );
+</script>

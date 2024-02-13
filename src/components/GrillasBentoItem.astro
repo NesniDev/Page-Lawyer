@@ -16,10 +16,10 @@ const { title, subtitle } = Astro.props;
   <div
     class="relative select-none flex flex-col gap-1 p-4 text-lg z-20 justify-end h-full"
   >
-    <h2 class="text-3xl font-semibold text-balance text-green-500/80 mb-1">{title}</h2>
+    <h2 class="text-3xl font-bold text-balance text-[#f1e9d0] mb-1">{title}</h2>
     {
       subtitle && (
-        <h4 class="text-3xl font-semibold text-red-500/80">{subtitle}</h4>
+        <h4 class="text-3xl font-bold text-[#A28541] ">{subtitle}</h4>
       )
     }
     <slot name="content" />
