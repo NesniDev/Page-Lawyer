@@ -1,29 +1,84 @@
-<section class="flex flex-col justify-center text-center text-[#351d13] gap-x-10">
-  <h3 class="py-10 text-[#351d13] text-4xl font-extrabold">Oficinas y Consultorios</h3>
+---
+import Whatsapp from "@/icons/Whatsapp.astro";
+import Adress from "@/icons/others/Adress.astro";
+import Binoculars from "@/icons/others/Binoculars.astro";
+---
+
+<section
+  class="flex flex-col justify-center text-center text-[#351d13] gap-x-10"
+>
+  <h3 class="py-10 text-[#351d13] text-4xl font-extrabold">
+    Oficinas y Consultorios
+  </h3>
   <div class="flex flex-col md:flex-row gap-10 justify-center items-center">
     <div class="flex flex-col gap-y-10 justify-start">
       <div class="[&>p:my-10] flex flex-col">
         <h3 class="mb-3 text-3xl text-[#A28541] font-extrabold">
-          Chiquinquirá
+          Chiquinquirá - Boyacá
         </h3>
-        <p>Cra. 9 #17-87, Chiquinquirá, Boyacá</p>
-        <p>Celular: +57 322 818 1218</p>
+        <p class="font-bold text-lg">Calle 18 No. 8-70</p>
+        <div class="flex justify-center items-center gap-3 mt-3">
+          <a
+            href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d496.3325712303287!2d-73.81490444848887!3d5.61703665141051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e41c9966eae0b81%3A0xe02b38376cb81207!2sHotel%20Primer%20Centauro!5e0!3m2!1ses!2sco!4v1712860598390!5m2!1ses!2sco"
+            target="ubicacion"
+          >
+            <Adress class="size-10 cursor-pointer hover:scale-110 transition" />
+          </a>
+          <a href="https://wa.link/vca77p">
+            <Whatsapp
+              class="size-8 cursor-pointer hover:scale-110 transition"
+            />
+          </a>
+          <a
+            href="https://www.google.com/maps/@5.6170367,-73.8149044,3a,75y,2.62h,79.3t/data=!3m6!1e1!3m4!1sG9hQi_x7iep75WId-2n9Tw!2e0!7i13312!8i6656?hl=es&entry=ttu"
+            target="_blank"
+          >
+            <Binoculars
+              class="size-8 cursor-pointer hover:scale-110 transition"
+            />
+          </a>
+        </div>
       </div>
       <div class="[&>p:my-10] flex flex-col">
-        <h3 class="mb-3 text-3xl text-[#A28541] font-extrabold">Bogotá</h3>
-        <p>Cra. 9 #17-87, Chiquinquirá, Boyacá</p>
-        <p>Celular: +57 322 818 1218</p>
+        <h3 class="mb-3 text-3xl text-[#A28541] font-extrabold">
+          Bogotá - Cundinamarca
+        </h3>
+        <p class="font-bold text-lg">Avenidas Jiménez No. 4-90</p>
+        <p class="font-bold text-lg">Oficina 503-504</p>
+        <div class="flex justify-center items-center gap-3 mt-3">
+          <a
+            href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.9625012663428!2d-74.07411992546871!3d4.600739342516957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99a6a3d03c47%3A0x669754c6d7a49249!2sAv%20Jimenez%20de%20Quesada%20%234-90%2C%20La%20Candelaria%2C%20Bogot%C3%A1%2C%20Cundinamarca!5e0!3m2!1ses!2sco!4v1712861025798!5m2!1ses!2sco"
+            target="ubicacion"
+          >
+            <Adress class="size-10 cursor-pointer hover:scale-110 transition" />
+          </a>
+          <a href="https://wa.link/vca77p">
+            <Whatsapp
+              class="size-8 cursor-pointer hover:scale-110 transition"
+            />
+          </a>
+          <a
+            href="https://www.google.com/maps/@4.6007269,-74.0715697,3a,75y,35.28h,90t/data=!3m7!1e1!3m5!1s7TVta5LYKJmoBixKw9ARCw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3D7TVta5LYKJmoBixKw9ARCw%26cb_client%3Dsearch.gws-prod.gps%26w%3D360%26h%3D120%26yaw%3D35.283554%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=es&entry=ttu"
+            target="_blank"
+          >
+            <Binoculars
+              class="size-8 cursor-pointer hover:scale-110 transition"
+            />
+          </a>
+        </div>
       </div>
     </div>
-    <div>
+    <aside>
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.6602366719776!2d-73.81762372577269!3d5.617085533034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e41c9b70ca43ed5%3A0x2e78c76432e4f7a8!2zQ3JhLiA5ICMxNy04NywgQ2hpcXVpbnF1aXLDoSwgQm95YWPDoQ!5e0!3m2!1ses!2sco!4v1707436539800!5m2!1ses!2sco"
+        name="ubicacion"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d496.3325712303287!2d-73.81490444848887!3d5.61703665141051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e41c9966eae0b81%3A0xe02b38376cb81207!2sHotel%20Primer%20Centauro!5e0!3m2!1ses!2sco!4v1712860598390!5m2!1ses!2sco"
+        class="rounded-3xl"
         width="600"
         height="450"
         style="border:0;"
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+    </aside>
   </div>
 </section>
