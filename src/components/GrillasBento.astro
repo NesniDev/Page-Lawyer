@@ -1,87 +1,38 @@
 ---
-import GrillasBentoItem from "./GrillasBentoItem.astro";
+import { CITY } from "../lib/city";
+import Container from "@/components/Contenedor.astro";
 ---
 
-<section
-  class="w-full max-w-[1400px] grid grid-cols-10 auto-rows-[500px] gap-5 mx-auto px-10 text-white/80"
->
-  <GrillasBentoItem
-    class="col-span-10 md:col-span-4"
-    title="Tunja - Boyacá"
-    subtitle="Asistencia legal"
+<Container>
+  <section
+    class="grid grid-cols-10 auto-rows-[400px] gap-5 mx-auto px-10 text-white/80 my-10"
   >
-    <div
-      slot="image"
-      class="absolute left-0 top-0 bottom-0 object-cover object-center w-full
+    {
+      CITY.map((cities) => (
+        <article
+          class={`${cities.class} relative group overflow-hidden rounded-xl backdrop-blur-md border border-black/10 shadow-inner shadow-white/10`}
+        >
+          
+          <div class="absolute z-100 bottom-0 top-0 size-full bg-gradient-to-b from-transparent from-40% via-black/50 to-black/80" />
+          <div
+            class="absolute left-0 top-0 bottom-0 object-cover object-center w-full
       h-full group-hover:scale-110 group-hover:bg-white transition-scale duration-1000
       ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-transparent -z-10"
-      style="background-image: url('tunja.jpg');"
-    >
-    </div>
-    <p slot="content" class="max-w-xl">
-      Valoramos la confianza y la confidencialidad, y nos esforzamos por
-      construir relaciones sólidas y duraderas con nuestros clientes basadas en
-      el respeto mutuo y la colaboración.
-    </p>
-  </GrillasBentoItem>
-  <GrillasBentoItem
-    class="col-span-10 md:col-span-6"
-    title="Chiquinquirá - Boyacá"
-    subtitle="Asistencia legal"
-  >
-    <div
-      slot="image"
-      class="absolute left-0 top-0 bottom-0 object-cover object-center w-full
-      h-full group-hover:scale-110 group-hover:bg-white transition-scale duration-1000
-      ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-transparent -z-10"
-      style="background-image: url('Chiquinquira_2.jpeg');"
-    >
-    </div>
-    <p slot="content" class="max-w-xl">
-      Mi objetivo es asegurarme de que comprendan completamente sus derechos
-      legales y las opciones disponibles para resolver su situación legal de
-      manera favorable. Trabajaré incansablemente para proteger sus intereses y
-      buscar la mejor solución posible para su caso.
-    </p>
-  </GrillasBentoItem>
-  <GrillasBentoItem
-    class="col-span-10 md:col-span-6"
-    title="Villa de Leyva - Boyacá"
-    subtitle="Asistencia legal"
-  >
-    <div
-      slot="image"
-      class="absolute left-0 top-0 bottom-0 object-cover object-center w-full
-      h-full group-hover:scale-110 group-hover:bg-white transition-scale duration-1000
-      ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-transparent -z-10"
-      style="background-image: url('villa de leyva.jpg');"
-    >
-    </div>
-    <p slot="content" class="max-w-xl">
-      En mi práctica legal, priorizo la comunicación abierta y transparente con
-      mis clientes. Mi objetivo es asegurarme de que comprendan completamente
-      sus derechos legales y las opciones disponibles para resolver su situación
-      legal de manera satisfactoria.
-    </p>
-  </GrillasBentoItem>
-  <GrillasBentoItem
-    class="col-span-10 md:col-span-4"
-    title="Sáchica - Boyacá"
-    subtitle="Asistencia legal"
-  >
-    <div
-      slot="image"
-      class="absolute left-0 top-0 bottom-0 object-cover object-center w-full
-      h-full group-hover:scale-110 group-hover:bg-white transition-scale duration-1000
-      ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-transparent -z-10"
-      style="background-image: url('SACHICA_2.jpg');"
-    >
-    </div>
-    <p slot="content" class="max-w-xl">
-      Además de mis servicios de representación legal, ofrezco talleres
-      informativos y sesiones de asesoramiento gratuitas para ayudar a informar
-      a nuestros ciudadanos sobre temas legales relevantes, desde sus derechos
-      básicos hasta cómo navegar por el sistema legal con confianza.
-    </p>
-  </GrillasBentoItem>
-</section>
+            style=`background-image: url("${cities.img}");`
+          />
+          <div class="relative select-none flex flex-col gap-1 p-4 text-lg z-20 justify-end h-full">
+            <h2 class="text-3xl font-bold text-balance text-[#f1e9d0] mb-1">
+              {cities.title}
+            </h2>
+            {cities.subTitle && (
+              <h4 class="text-2xl font-bold  text-[#f1e9d0]">
+                {cities.subTitle}
+              </h4>
+            )}
+            <p class="max-w-xl text-base">{cities.description}</p>
+          </div>
+        </article>
+      ))
+    }
+  </section>
+</Container>
