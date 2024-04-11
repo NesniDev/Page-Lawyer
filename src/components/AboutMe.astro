@@ -1,26 +1,50 @@
-<div class="flex flex-col md:flex-row gap-x-10 justify-center items-center text-justify text-black/80">
-  <div class="[&>p]:mb-6 text-base">
-    <p>
-      Mi nombre es <span class="text-[#7f4f29] font-extrabold">Sandra Liliana Alba Mendieta</span> y soy una apasionada
-      abogada especializada en <span class="text-[#7f4f29] font-extrabold">derecho laboral</span>. Mi enfoque principal se centra en asesorar a empleados y <strong class="text-red-500">sindicatos</strong> en una
-      amplia gama de <span class="text-[#7f4f29] font-extrabold">asuntos laborales</span>, desde disputas salariales y
-      hasta despidos injustificados y condiciones laborales injustas.
-    </p>
-    
-    <p>
-      Mi objetivo es no solo resolver los problemas laborales de mis clientes,
-      sino también <span class="text-[#7f4f29] font-extrabold">crear un impacto positivo en el sistema legal</span> en su conjunto.
-      Estoy comprometido a proporcionar un servicio legal excepcional, basado en
-      la integridad, la ética y la compasión. Si estás enfrentando desafíos en
-      tu lugar de trabajo o necesitas <span class="text-[#7f4f29] font-extrabold">asesoramiento legal en materia laboral</span>,
-      estoy aquí para ayudarte a alcanzar una solución justa y satisfactoria.
-    </p>
+---
+import Container from "@/components/Contenedor.astro";
+---
+
+<Container class="flex-col">
+  <div>
+    <h2
+      class="text-4xl md:text-4xl font-semibold mb-8 flex flex-row justify-center items-center gap-4 text-[#351d13]"
+    >
+      Acerca de mi
+    </h2>
   </div>
-<div>
-  <img
-    src="fotoPersonal.webp"
-    alt="Foto personal de about me"
-    class="rotate-3 scale-75 md:scale-150 lg:scale-125 "
-  />
-</div>
-<section/>
+  <div
+    class="flex flex-col md:flex-row gap-x-10 justify-center items-center text-justify text-black/80"
+  >
+    <div class="[&>p]:mb-6 text-base">
+      <p>
+        Mi nombre es <span class="text-[#7f4f29] font-extrabold"
+          >Sandra Liliana Alba Mendieta</span
+        > y soy una apasionada Abogada especializada en <span
+          class="text-[#7f4f29] font-extrabold">derecho laboral</span
+        >. Mi enfoque principal se centra en asesorar a empleadores y
+        trabajadores con amplia experiencia en asuntos laborales, demandas de
+        reclamación de acreencias laborales, disputas salariales, despidos
+        injustificados, liquidaciones labores y condiciones laborales injustas.
+      </p>
+
+      <p>
+        Así mismo brindo asesorías en las áreas de Familia, civil y
+        administrativo. Mi objetivo es resolver los problemas laborales de mis
+        clientes, sino también <span class="text-[#7f4f29] font-extrabold"
+          >crear un impacto positivo en el sistema legal</span
+        > en su conjunto. Estoy comprometido a proporcionar un servicio legal excepcional,
+        basado en la integridad, la ética y la compasión. Si necesitas asesoramiento
+        legal en materia <span class="text-[#7f4f29] font-extrabold"
+          >laboral, Civil, Familia y Administrativo
+        </span> para ayudarte a alcanzar una solución justa y satisfactoria.
+      </p>
+    </div>
+    <div>
+      <img
+        decoding="async"
+        loading="lazy"
+        src="fotoPersonal.webp"
+        alt="Foto personal de Sandra Alba"
+        class="rotate-3 scale-75 md:scale-150 lg:scale-125"
+      />
+    </div>
+  </div>
+</Container>
