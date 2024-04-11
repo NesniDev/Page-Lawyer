@@ -1,6 +1,10 @@
 ---
-const {class: className, id} = Astro.props
+
 ---
-<section id={`${Astro.props.id}`} class={`w-full lg:w-[1000px] mx-auto pt-10 pb-0 md:pt-20 md:pb-20 overflow-hidden ${Astro.props.class} `}>
-    <slot/>
+
+<section
+  id={`${Astro.props.id}`}
+  class={`flex w-full max-w-[1000px] mx-auto justify-between items-center ${Astro.props.class} `}
+>
+  <slot />
 </section>
