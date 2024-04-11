@@ -1,99 +1,31 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import BadgeButton from "../components/Bagde.astro";
 import WhatsappIcon from "../icons/Whatsapp.astro";
-import SocialMedia from "../components/SocialMedia.astro";
-import FacebookIcon from "../icons/Facebook.astro";
-import InstagramIcon from "../icons/Instagram.astro";
-import MailIcon from "../icons/Mail.astro";
 import ExperienciaTotal from "../components/ExperienciaTotal.astro";
 import Contenedor from "../components/Contenedor.astro";
 import AboutMe from "../components/AboutMe.astro";
 import GrillasBento from "../components/GrillasBento.astro";
-import Services from "../components/Services.astro";
+import Features from "../components/Features.astro";
 import Direccion from "../components/Direccion.astro";
+import SectionMain from "@/components/SectionMain.astro";
 ---
 
 <Layout
   title="Sandra Liliana Alba Mendieta - Abogada Litigante"
   description="¡Protege tus derechos laborales con la ayuda de un experto! Sandra Liliana Alba, abogada especializada en Derecho Laboral, ofrece asesoramiento legal integral y representación en casos de discriminación, salarios impagos, despidos injustificados y más. ¡Contacta ahora para una consulta personalizada!"
 >
-<main class="relative px-5">
-  <a 
-  href=https://wa.link/1nid20"
-  class="fixed ">
+  <main class="">
+    <a href='https://wa.link/1nid20"' class="fixed">
+      <WhatsappIcon
+        class="absolute size-14 top-[510px] left-[1425px] rounded-full bg-white shadow-xl shadow-green-500/70 hover:-translate-y-3 transition-all duration-200"
+      />
+    </a>
+    <SectionMain />
+    <GrillasBento />
+    <ExperienciaTotal />
+    <Features />
+    <AboutMe />
 
-    <WhatsappIcon class="absolute size-14 top-[510px] left-[1425px] rounded-full bg-white shadow-xl shadow-green-500/70 hover:-translate-y-3 transition-all duration-200"/>
-  </a>
-    <Contenedor class="">
-      <div class="flex flex-col lg:grid lg:grid-cols-10 lg:gap-x-20 ml-1">
-        <div class="flex flex-col sm:col-span-10 m-auto lg:col-span-6 auto-rows-auto">
-          <h1
-            class="text-[#351d13]/60 text-xl md:text-3xl xl:text-5xl font-bold flex flex-row gap-4 pb-5 justify-center"
-          >Dra. Sandra Alba<div class="flex justify-center items-center">
-              <BadgeButton>Abogada Litigante</BadgeButton>
-            </div>
-          </h1>
-          <p
-            class="text-pretty text-sm md:text-lg xl:text-xl opacity-80 text-black/80 font-extralight text-justify "
-          >
-            Me enorgullece presentarme como abogada especializada en Derecho
-            Laboral. Con una profunda pasión por la justicia y un compromiso
-            inquebrantable con los derechos de los trabajadores. Creo firmemente en
-            la importancia de equilibrar el poder entre empleadores y empleados, y
-            trabajo incansablemente para asegurar que mis clientes reciban la
-            representación legal experta que merecen.
-          </p>
-          <nav
-            class="flex justify-center gap-1.5 lg:gap-4 flex-row py-4 flex-wrap"
-          >
-            <SocialMedia href="https://www.facebook.com/profile.php?id=100066769206943">
-              <FacebookIcon class="size-4 lg:size-5" />
-              <span class="text-[12px] text-black/80">Facebook</span>
-            </SocialMedia>
-            
-            <SocialMedia href="/">
-              <InstagramIcon class="size-4 md:size-5" />
-              <span class="text-[12px] text-black/80">Instagram</span>
-            </SocialMedia>
-            <SocialMedia href="mailto:sandraliliana@hotmail.com">
-              <MailIcon class="size-4 md:size-5" />
-              <span class="text-[12px] text-black/80"> sandraliliana1202@hotmail.com</span>
-            </SocialMedia>
-          </nav>
-        </div>
-        <div class="col-span-10 m-auto lg:col-span-4 auto-rows-auto w-72 max-w-full" >
-          <img class="lg:-mt-8 rounded-full w-60" src="fotoPrincipal.jpg" alt="">
-        </div>
-      </div>
-    </Contenedor>
-    <Contenedor>
-      <GrillasBento />
-    </Contenedor>
-    <Contenedor id="Acerca de mi">
-      <h2
-      class="text-4xl md:text-4xl font-semibold mb-8 flex flex-row justify-center items-center gap-4 text-[#351d13]"
-      >Acerca de mi</h2>
-      <AboutMe />
-    </Contenedor>
-    <Contenedor>
-      <Services/>
-    </Contenedor>
-    
-    <Contenedor id="experiencia">
-      <h2
-        class="text-4xl md:text-4xl font-semibold mb-8 flex flex-row justify-center items-center gap-4 text-[#351d13]"
-      >
-        <!-- <MaletaIcon class="size-7" /> -->
-        Experiencia Laboral
-      </h2>
-      <ExperienciaTotal />
-    </Contenedor>
-    
-    
-    <Contenedor>
-      <Direccion/>
-    </Contenedor>
-    
+    <Direccion />
   </main>
 </Layout>
