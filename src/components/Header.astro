@@ -1,72 +1,116 @@
 ---
-import Menu from "../icons/Menu.astro";
+import Menu from "@/icons/others/menu.astro";
+import X from "@/icons/others/x.astro";
+import Container from "@/components/Contenedor.astro";
 ---
 
 <header
-transition:persist
-  class="relative md:py-0 mx-auto flex flex-row justify-between items-center w-full xl:w-[1000px] mt-0 md:mt-9 px-8"
+  transition:persist
+  class="flex md:sticky top-0 justify-between items-center py-5 px-5 md:py-2 z-[99]"
 >
-  <img
-    class="size-32 xl:size-28"
-    src="logo.png"
-    alt="Foto Logo Página"
-  />
-  <nav
-    id="menu"
-    class="z-40 text-4xl md:text-base absolute h-full top-0 left-0 right-0 bg-black py-[400px] md:py-0 md:static
-    items-center justify-center md:bg-transparent md:ml-36 lg:ml-80
-    hidden md:block flex flex-col md:flex-row gap-2 xl:gap-x-5 animate-jump-in
-    font-semibold lg:text-base text-[#CAA152] bg-gradient-to-r from-slate-800 md:from-transparent opacity-90 fijada"
-  >
-    <a
-      class="py-2 px-3 rounded-md hover:bg-yellow-500/70 hover:text-slate-800 font-semibold hover:-translate-y-1 transition-all delay-150 ease-in-out"
-      href="/">Inicio</a
+  <Container>
+    <a href="/" class="z-[99]">
+      <img
+        class="size-32 md:size-28"
+        decoding="async"
+        src="logo.png"
+        alt="Foto Logo Página"
+      />
+    </a>
+    <nav
+      id="menu"
+      class="text-4xl md:text-base min-h-full inset-0 md:static md:bg-transparent fixed text-center justify-center pt-40 md:pt-0
+    hidden md:flex opacity-90 font-semibold text-[#CAA152] bg-gradient-to-t to-slate-900 from-slate-900 md:from-transparent h-full md:h-auto"
     >
-    <a
-      class="py-2 px-3 rounded-md hover:bg-yellow-500/70 hover:text-slate-800 font-semibold hover:-translate-y-1 transition-all delay-100 ease-in-out"
-      href="/#Acerca de mi">Acerca de mi</a
-    >
-    <a
-      class="py-2 px-3 rounded-md hover:bg-yellow-500/70 hover:text-slate-800 font-semibold hover:-translate-y-1 transition-all delay-100 ease-in-out"
-      href="/#experiencia">Experiencia</a
-    >
-    <a
-      class="py-2 px-3 rounded-md hover:bg-yellow-500/70 hover:text-slate-800 font-semibold hover:-translate-y-1 transition-all delay-100 ease-in-out"
-      href="/contacto">Contacto</a
-    >
-  </nav>
-  <button class="button z-50">
-    <Menu class="w-10 md:hidden block" />
-  </button>
+      <ul class="flex flex-col md:flex-row justify-center gap-10 md:gap-4">
+        <li>
+          <a
+            class="py-2 px-3 hover:-translate-y-3 rounded-md hover:bg-yellow-500/70 hover:text-slate-800 font-semibold transition delay-150 ease-in-out"
+            href="/">Inicio</a
+          >
+        </li>
+        <li>
+          <a
+            class="py-2 px-3 hover:-translate-y-3 rounded-md hover:bg-yellow-500/70 hover:text-slate-800 font-semibold transition delay-100 ease-in-out"
+            href="/#Acerca de mi">Acerca de mi</a
+          >
+        </li>
+        <li>
+          <a
+            class="py-2 px-3 hover:-translate-y-3 rounded-md hover:bg-yellow-500/70 hover:text-slate-800 font-semibold transition delay-100 ease-in-out"
+            href="/#experiencia">Experiencia</a
+          >
+        </li>
+        <li>
+          <a
+            class="py-2 px-3 hover:-translate-y-3 rounded-md hover:bg-yellow-500/70 hover:text-slate-800 font-semibold transition delay-100 ease-in-out"
+            href="/contacto">Contacto</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="z-50 mr-5 md:hidden">
+      <Menu
+        class="absolute opacity-1 cursor-pointer text-orange-800 size-7 menuview"
+      />
+      <X
+        class="opacity-0 cursor-pointer size-7 menuclose text-orange-800 z-50"
+      />
+    </div>
+  </Container>
 </header>
-
-<script>
-  const menu = document.querySelector("#menu");
-  const boton = document.querySelector(".button");
-  const navLinks = document.querySelectorAll('#menu a');
-
-  boton.addEventListener(
-    "click",
-    () => {
-
-      menu.classList.toggle("hidden");
-      
-      navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        menu.classList.add('hidden'); // Ocultar el menú desplegable
-      });
-});
-    })
-</script>
-
 <style>
-  .fijada{
-    position: fixed;
-  }
+  @media (min-width: 768px) {
+    header {
+      transition: animation 0.2s ease-in;
+      animation: scroll linear both;
+      animation-timeline: scroll(root block);
+      animation-range: 0 10px;
+    }
 
-  @media screen and (min-width: 768px){
-    .fijada{
-      position: relative;
+    @keyframes scroll {
+      1% {
+        color: aqua;
+      }
+      100% {
+        z-index: 100;
+        background: rgb(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+      }
     }
   }
+  .menuview,
+  .menuclose {
+    transition: opacity 0.2s ease-in-out;
+  }
 </style>
+
+<script>
+  const $menuView = document.querySelector(".menuview");
+  const $menuClose = document.querySelector(".menuclose");
+  const $navBar = document.querySelector("#menu");
+
+  $menuView.addEventListener("click", () => {
+    $menuView.classList.toggle("opacity-0");
+    $menuClose.classList.toggle("opacity-0");
+    $navBar.classList.toggle("hidden");
+
+    window.removeEventListener("wheel", preventDefault);
+    window.removeEventListener("touchmove", preventDefault);
+    document.body.classList.toggle("overflow-hidden");
+  });
+
+  $menuClose.addEventListener("click", () => {
+    $menuClose.classList.toggle("opacity-0");
+    $menuView.classList.toggle("opacity-0");
+    $navBar.classList.toggle("hidden");
+
+    window.addEventListener("wheel", preventDefault, { passive: false });
+    window.addEventListener("touchmove", preventDefault, { passive: false });
+    document.body.classList.toggle("overflow-hidden");
+  });
+
+  function preventDefault(e) {
+    e.preventDefault();
+  }
+</script>
