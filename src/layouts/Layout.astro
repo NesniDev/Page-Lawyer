@@ -1,6 +1,8 @@
 ---
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
+import WhatsappIcon from "../icons/Whatsapp.astro";
+
 import { ViewTransitions } from "astro:transitions";
 import "@fontsource-variable/onest";
 interface Props {
@@ -12,13 +14,12 @@ const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/logo.png" />
-    <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <ViewTransitions />
   </head>
@@ -36,43 +37,47 @@ const { title, description } = Astro.props;
     <Header />
     <slot />
     <Footer />
-  </body><style is:global>
-    @import url("https://fonts.cdnfonts.com/css/caviar-dreams");
-    :root {
-      color-scheme: light dark;
-      --background: #f9f6ed;
-      --letra: #f1e9d0;
-      --a: #caa152;
-      --titulos: #7f4f29;
-      --badge: #ff790c;
-    }
-    html {
-      font-family: "Caviar Dreams", system-ui, sans-serif;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      /* color: #111e31; */
-
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    @media (prefers-reduced-motion) {
+    <a href='https://wa.link/1nid20"' class="fixed">
+      <WhatsappIcon
+        class="absolute size-14 top-[630px] left-[1450px] rounded-full bg-white shadow-xl shadow-green-500/70 hover:-translate-y-3 transition-all duration-200"
+      />
+    </a>
+    <style is:global>
+      @import url("https://fonts.cdnfonts.com/css/caviar-dreams");
+      :root {
+        color-scheme: light dark;
+        --background: #f9f6ed;
+        --letra: #f1e9d0;
+        --a: #caa152;
+        --titulos: #7f4f29;
+        --badge: #ff790c;
+      }
       html {
-        scroll-behavior: auto;
+        font-family: "Caviar Dreams", system-ui, sans-serif;
+        scroll-behavior: smooth;
       }
-    }
-    @media (prefers-color-scheme: dark) {
+
       body {
-        color: var(--letra);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
       }
-    }
-    @media (prefers-color-scheme: light) {
-      body {
-        color: rgba(255, 255, 255, 0.9);
+
+      @media (prefers-reduced-motion) {
+        html {
+          scroll-behavior: auto;
+        }
       }
-    }
-  </style>
+      @media (prefers-color-scheme: dark) {
+        body {
+          color: var(--letra);
+        }
+      }
+      @media (prefers-color-scheme: light) {
+        body {
+          color: rgba(255, 255, 255, 0.9);
+        }
+      }
+    </style>
+  </body>
 </html>

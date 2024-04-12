@@ -72,7 +72,9 @@ import { SERVICES } from "@/lib/features";
     .cards {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
       gap: 10px;
     }
 
@@ -96,21 +98,6 @@ import { SERVICES } from "@/lib/features";
       position: relative;
       padding: 0px 15px;
     }
-    /* 
-  .icon::after {
-    content: "";
-    position: absolute;
-    width: 70px;
-    height: 40px;
-    background-color: bisque;
-    border: 2px solid #ebac2ed0;
-    background-image: url("logo.jpg");
-    background-size: cover;
-    background-position: center;
-    bottom: -20px;
-    left: 90px;
-    z-index: -1;
-  } */
 
     .cards .card p.tip {
       font-size: 17px;
