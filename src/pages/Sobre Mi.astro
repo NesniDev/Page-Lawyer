@@ -1,0 +1,77 @@
+---
+import Container from "@/components/Contenedor.astro";
+import Layout from "../layouts/Layout.astro";
+import SocialMedia from "@/components/SocialMedia.astro";
+import FacebookIcon from "@/icons/Facebook.astro";
+import InstagramIcon from "@/icons/Instagram.astro";
+import MailIcon from "@/icons/Mail.astro";
+---
+
+<Layout title="Sobre Mi" description="">
+  <Container class="flex-col mt-12 mb-24">
+    <div>
+      <h2
+        class="text-4xl md:text-4xl font-semibold mb-8 flex flex-row justify-center items-center gap-4 text-[#351d13]"
+      >
+        Información Personal
+      </h2>
+    </div>
+    <div
+      class="flex flex-col md:flex-row gap-x-10 justify-center items-center text-justify text-black/80"
+    >
+      <div class="[&>p]:mb-6 text-base">
+        <p>
+          Mi nombre es <span class="text-[#7f4f29] font-extrabold"
+            >Sandra Liliana Alba Mendieta</span
+          > y soy una apasionada Abogada especializada en <span
+            class="text-[#7f4f29] font-extrabold">derecho laboral</span
+          >. Mi enfoque principal se centra en asesorar a empleadores y
+          trabajadores con amplia experiencia en asuntos laborales, demandas de
+          reclamación de acreencias laborales, disputas salariales, despidos
+          injustificados, liquidaciones labores y condiciones laborales
+          injustas.
+        </p>
+
+        <p>
+          Así mismo brindo asesorías en las áreas de Familia, civil y
+          administrativo. Mi objetivo es resolver los problemas laborales de mis
+          clientes, sino también <span class="text-[#7f4f29] font-extrabold"
+            >crear un impacto positivo en el sistema legal</span
+          > en su conjunto. Estoy comprometido a proporcionar un servicio legal excepcional,
+          basado en la integridad, la ética y la compasión. Si necesitas asesoramiento
+          legal en materia <span class="text-[#7f4f29] font-extrabold"
+            >laboral, Civil, Familia y Administrativo
+          </span> para ayudarte a alcanzar una solución justa y satisfactoria.
+        </p>
+      </div>
+      <div>
+        <img
+          decoding="async"
+          loading="lazy"
+          src="fotoPersonal.webp"
+          alt="Foto personal de Sandra Alba"
+          class="rotate-3 scale-75 md:scale-150 lg:scale-125"
+        />
+      </div>
+    </div>
+    <nav class="flex justify-center gap-1.5 lg:gap-4 flex-row py-4 flex-wrap">
+      <SocialMedia
+        href="https://www.facebook.com/profile.php?id=100066769206943"
+      >
+        <FacebookIcon class="size-4 lg:size-5" />
+        <span class="text-[12px] text-black/80">Facebook</span>
+      </SocialMedia>
+
+      <SocialMedia href="/">
+        <InstagramIcon class="size-4 md:size-5" />
+        <span class="text-[12px] text-black/80">Instagram</span>
+      </SocialMedia>
+      <SocialMedia href="mailto:sandraliliana@hotmail.com">
+        <MailIcon class="size-4 md:size-5" />
+        <span class="text-[12px] text-black/80">
+          sandraliliana1202@hotmail.com</span
+        >
+      </SocialMedia>
+    </nav>
+  </Container>
+</Layout>
