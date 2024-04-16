@@ -4,10 +4,12 @@ import Expert from "@/icons/services/Expert.astro";
 import Study from "@/icons/services/Study.astro";
 import Container from "@/components/Contenedor.astro";
 import { SERVICES } from "@/lib/features";
+
+const { id } = Astro.props;
 ---
 
-<Container>
-  <section class="mt-14 mb-32 mx-auto">
+<Container id={id}>
+  <section class="mt-14 mx-auto">
     <h3 class="text-center text-4xl mb-16 text-[#351d13] font-bold">
       Experiencia reconocida
     </h3>
