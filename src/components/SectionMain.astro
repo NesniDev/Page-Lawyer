@@ -5,6 +5,7 @@ import FacebookIcon from "@/icons/Facebook.astro";
 import InstagramIcon from "@/icons/Instagram.astro";
 import MailIcon from "@/icons/Mail.astro";
 import BadgeButton from "./Bagde.astro";
+import Phone from "@/icons/Phone.astro";
 ---
 
 <Contenedor class="min-h-[80vh]">
@@ -29,14 +30,17 @@ import BadgeButton from "./Bagde.astro";
         trabajo incansablemente para asegurar que mis clientes reciban la
         representación legal experta que merecen.
       </p>
-      <nav class="flex justify-center gap-1.5 lg:gap-4 flex-row py-4 flex-wrap">
+      <nav class="flex justify-center gap-1.5 lg:gap-3 flex-row py-4 flex-wrap">
         <SocialMedia
           href="https://www.facebook.com/profile.php?id=100066769206943"
         >
           <FacebookIcon class="size-4 lg:size-5" />
           <span class="text-[12px] text-black/80">Facebook</span>
         </SocialMedia>
-
+        <SocialMedia href="tel:+573132405135">
+          <Phone class="size-4 md:size-6" />
+          <span class="text-[12px] text-black/80"> Teléfono</span>
+        </SocialMedia>
         <SocialMedia href="/">
           <InstagramIcon class="size-4 md:size-5" />
           <span class="text-[12px] text-black/80">Instagram</span>
