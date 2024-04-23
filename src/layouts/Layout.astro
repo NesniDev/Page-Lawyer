@@ -2,9 +2,10 @@
 import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import Arrow from "../icons/others/arrow.astro";
+import SEO from "@/components/SEO.astro";
 
-import { ViewTransitions } from "astro:transitions";
 import "@fontsource-variable/onest";
+
 interface Props {
   title: string;
   description: string;
@@ -15,14 +16,7 @@ const { title, description } = Astro.props;
 
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/logo.avif" />
-    <title>{title}</title>
-    <ViewTransitions />
-  </head>
+  <SEO title={title} description={description} />
   <body class="" id="inicio">
     <div class="fixed left-0 top-0 -z-10 h-full w-full">
       <div
