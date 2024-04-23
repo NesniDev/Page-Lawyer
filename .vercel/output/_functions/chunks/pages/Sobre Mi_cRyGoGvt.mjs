@@ -1,6 +1,6 @@
 /* empty css                                */
-import { c as createAstro, d as createComponent, r as renderTemplate, m as maybeRenderHead, s as spreadAttributes, f as renderSlot, g as renderComponent } from '../astro_elZzrBSR.mjs';
-import { $ as $$Contenedor, a as $$Layout } from './404_HhADyAWy.mjs';
+import { c as createAstro, d as createComponent, r as renderTemplate, m as maybeRenderHead, s as spreadAttributes, f as renderSlot, h as renderComponent } from '../astro_ojMSZEYH.mjs';
+import { $ as $$Contenedor, a as $$Layout } from './404_c6EfUubn.mjs';
 
 const $$Astro$5 = createAstro("https://www.abogadasandraalba.com/");
 const $$SocialMedia = createComponent(async ($$result, $$props, $$slots) => {

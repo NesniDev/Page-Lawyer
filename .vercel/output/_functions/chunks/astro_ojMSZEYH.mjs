@@ -2138,6 +2138,20 @@ cssesc.options = {
 
 cssesc.version = '3.0.0';
 
+const transitionNameMap = /* @__PURE__ */ new WeakMap();
+function incrementTransitionNumber(result) {
+  let num = 1;
+  if (transitionNameMap.has(result)) {
+    num = transitionNameMap.get(result) + 1;
+  }
+  transitionNameMap.set(result, num);
+  return num;
+}
+function createTransitionScope(result, hash) {
+  const num = incrementTransitionNumber(result);
+  return `astro-${hash}-${num}`;
+}
+
 function spreadAttributes(values = {}, _name, { class: scopedClassName } = {}) {
   let output = "";
   if (scopedClassName) {
@@ -2155,4 +2169,4 @@ function spreadAttributes(values = {}, _name, { class: scopedClassName } = {}) {
   return markHTMLString(output);
 }
 
-export { AstroError as A, ReservedSlotName as B, ClientAddressNotAvailable as C, renderSlotToString as D, ExpectedImage as E, renderJSX as F, GetStaticPathsRequired as G, chunkToString as H, IncompatibleDescriptorOptions as I, CantRenderPage as J, renderPage as K, LocalImageUsedWrongly as L, MissingImageDimension as M, NoMatchingStaticPathFound as N, REROUTE_DIRECTIVE_HEADER as O, PageNumberParamNotFound as P, bold as Q, ROUTE_DATA_SYMBOL as R, StaticClientAddressNotAvailable as S, red as T, UnsupportedImageFormat as U, yellow as V, dim as W, blue as X, UnsupportedImageConversion as a, MissingSharp as b, createAstro as c, createComponent as d, addAttribute as e, renderSlot as f, renderComponent as g, renderHead as h, getDefaultExportFromCjs as i, InvalidImageService as j, ExpectedImageOptions as k, ImageMissingAlt as l, maybeRenderHead as m, ResponseSentError as n, MiddlewareNoDataOrNextCalled as o, MiddlewareNotAResponse as p, InvalidGetStaticPathsReturn as q, renderTemplate as r, spreadAttributes as s, InvalidGetStaticPathsEntry as t, GetStaticPathsExpectedParams as u, GetStaticPathsInvalidRouteParam as v, PrerenderDynamicEndpointPathCollide as w, LocalsNotAnObject as x, ASTRO_VERSION as y, renderEndpoint as z };
+export { AstroError as A, renderEndpoint as B, ClientAddressNotAvailable as C, ReservedSlotName as D, ExpectedImage as E, renderSlotToString as F, GetStaticPathsRequired as G, renderJSX as H, IncompatibleDescriptorOptions as I, chunkToString as J, CantRenderPage as K, LocalImageUsedWrongly as L, MissingImageDimension as M, NoMatchingStaticPathFound as N, renderPage as O, PageNumberParamNotFound as P, REROUTE_DIRECTIVE_HEADER as Q, ROUTE_DATA_SYMBOL as R, StaticClientAddressNotAvailable as S, bold as T, UnsupportedImageFormat as U, red as V, yellow as W, dim as X, blue as Y, UnsupportedImageConversion as a, MissingSharp as b, createAstro as c, createComponent as d, addAttribute as e, renderSlot as f, createTransitionScope as g, renderComponent as h, renderHead as i, getDefaultExportFromCjs as j, InvalidImageService as k, ExpectedImageOptions as l, maybeRenderHead as m, ImageMissingAlt as n, ResponseSentError as o, MiddlewareNoDataOrNextCalled as p, MiddlewareNotAResponse as q, renderTemplate as r, spreadAttributes as s, InvalidGetStaticPathsReturn as t, InvalidGetStaticPathsEntry as u, GetStaticPathsExpectedParams as v, GetStaticPathsInvalidRouteParam as w, PrerenderDynamicEndpointPathCollide as x, LocalsNotAnObject as y, ASTRO_VERSION as z };

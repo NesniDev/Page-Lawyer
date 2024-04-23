@@ -35,8 +35,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
   <!-- Global Metadata -->
   <link rel="icon" type="image/svg+xml" href="/logo.avif" />
-  <link rel="apple-touch-icon" href="/images/icon/192x192.png" />
-  <link rel="manifest" href="/manifest.webmanifest" />
   <meta name="google" content="notranslate" />
   <link rel="apple-touch-icon" href="/logo.avif" />
   <meta name="msapplication-TileColor" content="#7f4f29" />
@@ -53,7 +51,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content="" />
+  <meta name="twitter:image" content="/logo.avif" />
   <meta name="twitter:image:alt" content={title} />
   <meta name="twitter:site" content="" />
   <meta name="twitter:creator" content="@neidernieto10" />

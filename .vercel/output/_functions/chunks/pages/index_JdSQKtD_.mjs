@@ -1,8 +1,8 @@
 /* empty css                                */
-import { c as createAstro, d as createComponent, r as renderTemplate, g as renderComponent, m as maybeRenderHead, e as addAttribute, s as spreadAttributes, f as renderSlot } from '../astro_elZzrBSR.mjs';
-import { $ as $$Contenedor, a as $$Layout } from './404_HhADyAWy.mjs';
+import { c as createAstro, d as createComponent, r as renderTemplate, h as renderComponent, m as maybeRenderHead, e as addAttribute, s as spreadAttributes, f as renderSlot } from '../astro_ojMSZEYH.mjs';
+import { $ as $$Contenedor, a as $$Layout } from './404_c6EfUubn.mjs';
 /* empty css                          */
-import { $ as $$SocialMedia, a as $$Facebook, b as $$Phone, c as $$Instagram, d as $$Mail } from './Sobre Mi_cGOOKI2f.mjs';
+import { $ as $$SocialMedia, a as $$Facebook, b as $$Phone, c as $$Instagram, d as $$Mail } from './Sobre Mi_cRyGoGvt.mjs';
 
 const CITY = [
   {
