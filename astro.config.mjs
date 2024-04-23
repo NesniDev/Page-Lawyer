@@ -9,5 +9,5 @@ export default defineConfig({
   site: "https://www.abogadasandraalba.com",
   integrations: [tailwind(), sitemap()],
   output: "server",
-  adapter: cloudflare(),
+  adapter: vercel(),
 });
