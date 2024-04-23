@@ -5,7 +5,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://www.abogadasandraalba.com/",
+  site: "https://www.abogadasandraalba.com",
   integrations: [tailwind(), sitemap()],
   output: "server",
   adapter: vercel(),

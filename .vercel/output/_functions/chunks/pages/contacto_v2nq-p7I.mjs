@@ -1,8 +1,8 @@
 /* empty css                                */
 import { c as createAstro, d as createComponent, r as renderTemplate, h as renderComponent, m as maybeRenderHead } from '../astro_ojMSZEYH.mjs';
-import { a as $$Layout } from './404_c6EfUubn.mjs';
+import { a as $$Layout } from './404_dflsk_Ki.mjs';
 
-const $$Astro = createAstro("https://www.abogadasandraalba.com/");
+const $$Astro = createAstro("https://www.abogadasandraalba.com");
 const $$Contacto = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Contacto;
