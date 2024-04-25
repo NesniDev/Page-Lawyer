@@ -11,7 +11,13 @@ import Container from "@/components/Contenedor.astro";
         href="/"
         class="justify-center md:justify-between flex items-center mb-4 md:mb-0"
       >
-        <img src="logo.avif" class="size-24" alt="Balanza de la Justicia" />
+        <img
+          src="logo.avif"
+          class="size-24"
+          alt="Balanza de la Justicia"
+          decoding="async"
+          loading="lazy"
+        />
       </a>
       <p class="text-xl font-semibold">Horario de atención</p>
       <p class="text-lg font-extralight">Lunes - Viernes</p>
@@ -82,6 +88,7 @@ import Container from "@/components/Contenedor.astro";
     <span
       class="text-sm text-gray-500 sm:text-center dark:text-gray-400 font-extralight"
       >© Copyright - 2024 | Sandra Liliana Alba - Abogada. Desarrollado por <a
+        href="https://wa.link/nnm5u0"
         class="absolute text-center ml-1.5 rounded-sm hover:bg-[#351d13]
         hover:scale-105 hover:-rotate-2 transition hover:text-white font-extrabold hover:px-2
          cursor-pointer"
