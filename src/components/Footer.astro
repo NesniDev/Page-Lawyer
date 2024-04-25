@@ -30,9 +30,7 @@ import Container from "@/components/Contenedor.astro";
         class="gap-10 flex flex-wrap justify-center items-start text-center mb-6 text-sm font-medium"
       >
         <li class="text-center">
-          <p class="cursor-pointer mb-3 font-extrabold">
-            <strong>Servicios Otorgados</strong>
-          </p>
+          <p class="cursor-pointer mb-3 font-extrabold">Servicios Otorgados</p>
           <p class="py-2 font-extralight">Laboral</p>
           <p class="py-2 font-extralight">Civil</p>
           <p class="py-2 font-extralight">Administrativo</p>
@@ -40,9 +38,7 @@ import Container from "@/components/Contenedor.astro";
         </li>
 
         <li class="flex flex-col">
-          <p class="cursor-pointer mb-3 font-extrabold">
-            <strong>Secciones</strong>
-          </p>
+          <p class="cursor-pointer mb-3 font-extrabold">Secciones</p>
 
           <a
             href="/Sobre Mi"
@@ -66,9 +62,7 @@ import Container from "@/components/Contenedor.astro";
           >
         </li>
         <li class="flex flex-col">
-          <p class="cursor-pointer mb-3 font-extrabold">
-            <strong>Politicas</strong>
-          </p>
+          <p class="cursor-pointer mb-3 font-extrabold">Politicas</p>
           <a
             href="/Condiciones"
             class="rounded-md py-2 px-1 hover:font-bold hover:-rotate-1 font-extralight hover:bg-slate-400/10 hover:text-slate-800 transition ease-in-out"
@@ -83,17 +77,26 @@ import Container from "@/components/Contenedor.astro";
       </ul>
     </div>
   </div>
-  <div class="text-center relative flex flex-col gap-3 mb-3">
-    <hr class="border-slate-500/80 shadow-xl" />
-    <span
-      class="text-sm text-gray-500 sm:text-center dark:text-gray-400 font-extralight"
-      >© Copyright - 2024 | Sandra Liliana Alba - Abogada. Desarrollado por <a
-        href="https://wa.link/nnm5u0"
-        class="absolute text-center ml-1.5 rounded-sm hover:bg-[#351d13]
-        hover:scale-105 hover:-rotate-2 transition hover:text-white font-extrabold hover:px-2
-         cursor-pointer"
-        >Ing. Neider Nieto
-      </a>
-    </span>
-  </div>
 </footer>
+
+<hr class="border-slate-500/80 shadow-xl" />
+<div class="text-center flex flex-col relative mx-auto">
+  <p
+    class="text-sm text-gray-500 sm:text-center dark:text-gray-400 font-extralight"
+  >
+    © Copyright - 2024 | Sandra Liliana Alba - Abogada.
+  </p>
+  <span
+    class="text-sm text-gray-500 sm:text-center dark:text-gray-400 font-extralight"
+  >
+    Desarrollado por
+    <a
+      href="https://wa.link/nnm5u0"
+      class="inline-flex ease-in-out justify-center items-center text-center rounded-sm hover:bg-[#351d13]
+                    hover:scale-105 hover:-rotate-2 transition hover:text-white font-extrabold hover:px-2
+                    cursor-pointer"
+    >
+      Ing. Neider Nieto
+    </a>
+  </span>
+</div>
