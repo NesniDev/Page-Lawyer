@@ -5,8 +5,8 @@ import Adress from "@/icons/others/Adress.astro";
 import Binoculars from "@/icons/others/Binoculars.astro";
 ---
 
-<Container>
-  <section
+<section class="">
+  <Container
     class="flex flex-col justify-center text-center text-[#351d13] gap-x-10"
   >
     <h3 class="py-10 text-[#351d13] text-2xl md:text-4xl font-extrabold">
@@ -81,7 +81,7 @@ import Binoculars from "@/icons/others/Binoculars.astro";
           </div>
         </div>
       </div>
-      <aside class="w-[550px] h-[350px] px-10 md:mx-0">
+      <aside class="w-[350px] h-[250px] sm:w-[550px] sm:h-[350px]">
         <iframe
           name="ubicacion"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d496.3325712303287!2d-73.81490444848887!3d5.61703665141051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e41c9966eae0b81%3A0xe02b38376cb81207!2sHotel%20Primer%20Centauro!5e0!3m2!1ses!2sco!4v1712860598390!5m2!1ses!2sco"
@@ -92,5 +92,5 @@ import Binoculars from "@/icons/others/Binoculars.astro";
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </aside>
     </div>
-  </section>
-</Container>
+  </Container>
+</section>
