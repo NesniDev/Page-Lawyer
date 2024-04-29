@@ -23,8 +23,10 @@ const { id } = Astro.props;
               <p class="text-6xl">+{service.number}</p>
               <img
                 class="size-16"
+                loading="lazy"
+                decoding="async"
                 src={service.image}
-                alt="Imagen de servicios"
+                alt="Imagen de servicios abogada colombia"
               />
             </div>
             <p class="font-extralight">{service.content}</p>
