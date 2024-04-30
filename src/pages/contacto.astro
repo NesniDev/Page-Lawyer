@@ -24,13 +24,15 @@ import Toastify from "@/components/Components-utils/Toastify.jsx";
         <div class="loadersito"></div>
       </div>
 
-      <Toastify client:visible />
+      <Toastify client:load />
     </fieldset>
   </div>
 </Layout>
 
 <style>
   /* HTML: <div class="loader"></div> */
+  #loading {
+  }
   .loadersito {
     --d: 22px;
     width: 4px;
