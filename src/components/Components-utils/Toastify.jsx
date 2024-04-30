@@ -14,7 +14,7 @@ function SweetAlertComponent() {
     // Disparar confeti
     confetti();
   };
-  const handleSubmit = (event) => {
+  const handleSubmit = () => {
     const loading = document.getElementById("loading");
     loading.classList.remove("hidden");
     setTimeout(() => {

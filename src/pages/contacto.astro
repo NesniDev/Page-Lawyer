@@ -1,7 +1,5 @@
 ---
-import Contenedor from "@/components/Contenedor.astro";
 import Layout from "@/layouts/Layout.astro";
-import Swal from "sweetalert2";
 import Toastify from "@/components/Components-utils/Toastify.jsx";
 ---
 
@@ -19,7 +17,7 @@ import Toastify from "@/components/Components-utils/Toastify.jsx";
       >
       <div
         id="loading"
-        class="hidden absolute inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50 min-h-full"
+        class="hidden absolute inset-0 bg-gray-900 bg-opacity-50 items-center justify-center z-50 min-h-full"
       >
         <div class="loadersito"></div>
       </div>
@@ -32,6 +30,7 @@ import Toastify from "@/components/Components-utils/Toastify.jsx";
 <style>
   /* HTML: <div class="loader"></div> */
   #loading {
+    display: flex;
   }
   .loadersito {
     --d: 22px;
