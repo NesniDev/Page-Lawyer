@@ -1,4 +1,3 @@
-import React from "react";
 import Swal from "sweetalert2";
 import confetti from "canvas-confetti";
 
@@ -14,7 +13,7 @@ function SweetAlertComponent() {
     // Disparar confeti
     confetti();
   };
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     const loading = document.getElementById("loading");
     loading.classList.remove("hidden");
     setTimeout(() => {
@@ -25,6 +24,30 @@ function SweetAlertComponent() {
     // Ahora llama a showAlert() después de que el tiempo de espera haya terminado
 
     // setTimeout(() => {}, 5000);
+    e.preventDefault();
+
+    // FormSubmit
+    const form = e.target;
+    const formData = new FormData(form);
+    fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   };
 
   return (
