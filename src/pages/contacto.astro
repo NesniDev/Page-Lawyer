@@ -19,12 +19,12 @@ import Toastify from "@/components/Components-utils/Toastify.jsx";
       >
       <div
         id="loading"
-        class="hidden absolute inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50"
+        class="hidden absolute inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50 min-h-full"
       >
         <div class="loadersito"></div>
       </div>
 
-      <Toastify client:load />
+      <Toastify client:visible />
     </fieldset>
   </div>
 </Layout>
