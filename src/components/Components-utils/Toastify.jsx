@@ -41,7 +41,6 @@ function SweetAlertComponent() {
             <input
               type="text"
               name="nombre"
-              id="floating_standard"
               class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-pink-300/60 focus:outline-none focus:ring-0 focus:border-pink-600 peer"
               placeholder=" "
               required
@@ -58,7 +57,6 @@ function SweetAlertComponent() {
               type="text"
               name="apellidos"
               required
-              id="floating_standard"
               class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-pink-300/60 focus:outline-none focus:ring-0 focus:border-pink-600 peer"
               placeholder=" "
             />
@@ -76,7 +74,6 @@ function SweetAlertComponent() {
               type="email"
               name="email"
               required
-              id="floating_standard"
               class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-pink-300/60 focus:outline-none focus:ring-0 focus:border-pink-600 peer"
               placeholder=" "
             />
@@ -91,7 +88,6 @@ function SweetAlertComponent() {
             <input
               type="tel"
               name="telefono"
-              id="floating_standard"
               class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-pink-300/60 focus:outline-none focus:ring-0 focus:border-pink-600 peer"
               placeholder=" "
               maxlength="10"
@@ -124,7 +120,6 @@ function SweetAlertComponent() {
         <div class="grid gap-6 mb-6 md:grid-cols-1">
           <div class="relative z-0">
             <textarea
-              id="floating_standard"
               name="mensaje"
               required
               class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-pink-300/60 focus:outline-none focus:ring-0 focus:border-pink-600 peer"
@@ -153,12 +148,13 @@ function SweetAlertComponent() {
             Autorizo la manipulación de mis datos.
           </label>
         </div>
-        <input
+        <button
           type="submit"
           id="button"
-          value="Enviar Formulario"
           class="font-semibold cursor-pointer w-fit m-auto text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 rounded-lg text-sm px-5 py-2.5 text-center mb-2"
-        />
+        >
+          Enviar Formulario
+        </button>
 
         <input
           type="hidden"
