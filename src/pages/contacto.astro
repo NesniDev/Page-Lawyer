@@ -1,6 +1,8 @@
 ---
 import Contenedor from "@/components/Contenedor.astro";
 import Layout from "@/layouts/Layout.astro";
+import Swal from "sweetalert2";
+import Toastify from "@/components/Components-utils/Toastify.jsx";
 ---
 
 <Layout
@@ -15,107 +17,39 @@ import Layout from "@/layouts/Layout.astro";
         class="gap-5 px-8 uppercase text-white-900/50 font-semibold text-[#CAA152]"
         >Formulario de Contacto</legend
       >
-      <form class="flex flex-col">
-        <div class="grid gap-6 mb-6 md:grid-cols-2">
-          <div class="relative z-0">
-            <input
-              type="text"
-              id="floating_standard"
-              class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-pink-300/60 focus:outline-none focus:ring-0 focus:border-pink-600 peer"
-              placeholder=" "
-            />
-            <label
-              for="floating_standard"
-              class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-pink-600 peer-focus:dark:text-pink-300/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
-              >Nombres</label
-            >
-          </div>
-          <div class="relative z-0">
-            <input
-              type="text"
-              id="floating_standard"
-              class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-pink-300/60 focus:outline-none focus:ring-0 focus:border-pink-600 peer"
-              placeholder=" "
-            />
-            <label
-              for="floating_standard"
-              class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-pink-600 peer-focus:dark:text-pink-300/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
-              >Apellidos</label
-            >
-          </div>
-        </div>
-        <div class="grid gap-6 mb-6 md:grid-cols-2">
-          <div class="relative z-0">
-            <input
-              type="email"
-              id="floating_standard"
-              class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-pink-300/60 focus:outline-none focus:ring-0 focus:border-pink-600 peer"
-              placeholder=" "
-            />
-            <label
-              for="floating_standard"
-              class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-pink-600 peer-focus:dark:text-pink-300/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
-              >Correo Electrónico</label
-            >
-          </div>
-          <div class="relative z-0">
-            <input
-              type="tel"
-              id="floating_standard"
-              class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-pink-300/60 focus:outline-none focus:ring-0 focus:border-pink-600 peer"
-              placeholder=" "
-            />
-            <label
-              for="floating_standard"
-              class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-pink-600 peer-focus:dark:text-pink-300/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
-              >Teléfono</label
-            >
-          </div>
-        </div>
-        <div class="relative z-0 mb-6">
-          <input
-            type="text"
-            id="floating_standard"
-            class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-pink-300/60 focus:outline-none focus:ring-0 focus:border-pink-600 peer"
-            placeholder=" "
-          />
-          <label
-            for="floating_standard"
-            class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-pink-600 peer-focus:dark:text-pink-300/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
-            >Asunto</label
-          >
-        </div>
-        <div class="grid gap-6 mb-6 md:grid-cols-1">
-          <div class="relative z-0">
-            <textarea
-              id="floating_standard"
-              class="block py-2.5 px-0 w-full text-sm text-slate-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-pink-300/60 focus:outline-none focus:ring-0 focus:border-pink-600 peer"
-              placeholder=""></textarea>
-            <label
-              for="floating_standard"
-              class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-7 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-pink-600 peer-focus:dark:text-pink-300/60 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-9 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
-              >Comentarios</label
-            >
-          </div>
-        </div>
+      <div
+        id="loading"
+        class="hidden absolute inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50"
+      >
+        <div class="loadersito"></div>
+      </div>
 
-        <div class="flex items-start mb-6">
-          <label
-            for="remember"
-            class="ms-2 text-sm text-[#CAA152] dark:text-gray-300 font-semibold"
-            >Acepto todos los <a
-              href="/contacto"
-              class="text-sky-400 hover:underline dark:text-blue-500"
-              >terminos y condiciones</a
-            >.</label
-          >
-        </div>
-        <button
-          type="button"
-          class="font-semibold w-fit m-auto text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 rounded-lg text-sm px-5 py-2.5 text-center mb-2"
-          >Enviar Formulario</button
-        >
-      </form>
+      <Toastify client:load />
     </fieldset>
   </div>
 </Layout>
+
+<style>
+  /* HTML: <div class="loader"></div> */
+  .loadersito {
+    --d: 22px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    color: #ffc400;
+    box-shadow:
+      calc(1 * var(--d)) calc(0 * var(--d)) 0 0,
+      calc(0.707 * var(--d)) calc(0.707 * var(--d)) 0 1px,
+      calc(0 * var(--d)) calc(1 * var(--d)) 0 2px,
+      calc(-0.707 * var(--d)) calc(0.707 * var(--d)) 0 3px,
+      calc(-1 * var(--d)) calc(0 * var(--d)) 0 4px,
+      calc(-0.707 * var(--d)) calc(-0.707 * var(--d)) 0 5px,
+      calc(0 * var(--d)) calc(-1 * var(--d)) 0 6px;
+    animation: l27 1s infinite steps(8);
+  }
+  @keyframes l27 {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+</style>
