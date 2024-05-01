@@ -8,7 +8,7 @@ function SweetAlertComponent() {
       text: "¡Gracias por contactarme, revisaré tu petición y me pondré en contacto contigo.!",
       icon: "success",
       showConfirmButton: false,
-      timer: 2000,
+      timer: 6000,
     });
     // Disparar confeti
     confetti();
