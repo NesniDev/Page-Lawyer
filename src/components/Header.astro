@@ -95,9 +95,9 @@ import Container from "@/components/Contenedor.astro";
     $menuClose.classList.toggle("opacity-0");
     $navBar.classList.toggle("hidden");
 
-    window.removeEventListener("wheel", preventDefault);
-    window.removeEventListener("touchmove", preventDefault);
-    document.body.classList.toggle("overflow-hidden");
+    // window.removeEventListener("wheel", preventDefault);
+    // window.removeEventListener("touchmove", preventDefault);
+    // document.body.classList.toggle("overflow-hidden");
   });
 
   $menuClose.addEventListener("click", () => {
@@ -105,9 +105,9 @@ import Container from "@/components/Contenedor.astro";
     $menuView.classList.toggle("opacity-0");
     $navBar.classList.toggle("hidden");
 
-    window.addEventListener("wheel", preventDefault, { passive: false });
-    window.addEventListener("touchmove", preventDefault, { passive: false });
-    document.body.classList.toggle("overflow-hidden");
+    // window.addEventListener("wheel", preventDefault, { passive: false });
+    // window.addEventListener("touchmove", preventDefault, { passive: false });
+    // document.body.classList.toggle("overflow-hidden");
   });
 
   function preventDefault(e) {
