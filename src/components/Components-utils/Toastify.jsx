@@ -8,7 +8,7 @@ function SweetAlertComponent() {
       text: "¡Gracias por contactarme, revisaré tu petición y me pondré en contacto contigo.!",
       icon: "success",
       showConfirmButton: false,
-      timer: 6000,
+      timer: 10000,
     });
     // Disparar confeti
     confetti();
@@ -24,7 +24,7 @@ function SweetAlertComponent() {
     // Ahora llama a showAlert() después de que el tiempo de espera haya terminado
 
     // setTimeout(() => {}, 5000);
-    e.preventDefault();
+    // e.preventDefault();
 
     // FormSubmit
     const form = e.target;
