@@ -26,8 +26,8 @@ const { id } = Astro.props;
                 <CountUp
                   client:visible
                   initial={0}
-                  final={`${Number(service.number)}`}
-                  delay={`${Number(service.delay)}`}
+                  final={service.number}
+                  delay={service.delay}
                 />
               </p>
               <img

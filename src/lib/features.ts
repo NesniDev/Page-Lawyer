@@ -7,7 +7,7 @@ export const SERVICES = [
     },
     {
       number: 1000,
-      delay: 10,
+      delay: 50,
       image: "seguidores.svg",
       content: "Seguidores en redes sociales",
     },
