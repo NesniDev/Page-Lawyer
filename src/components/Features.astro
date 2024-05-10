@@ -4,6 +4,7 @@ import Expert from "@/icons/services/Expert.astro";
 import Study from "@/icons/services/Study.astro";
 import Container from "@/components/Contenedor.astro";
 import { SERVICES } from "@/lib/features";
+import { CountUp } from "./Components-utils/CountUp";
 
 const { id } = Astro.props;
 ---
@@ -20,7 +21,15 @@ const { id } = Astro.props;
         SERVICES.map((service) => (
           <article class="flex flex-col text-xl text-[#351d13]">
             <div class="flex flex-row items-center gap-5 justify-center mb-2">
-              <p class="text-6xl">+{service.number}</p>
+              <p class="text-6xl tabular-nums">
+                +
+                <CountUp
+                  client:visible
+                  initial={0}
+                  final={`${Number(service.number)}`}
+                  delay={`${Number(service.delay)}`}
+                />
+              </p>
               <img
                 class="size-16"
                 loading="lazy"
