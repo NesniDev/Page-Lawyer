@@ -4,11 +4,11 @@ import confetti from "canvas-confetti";
 function SweetAlertComponent() {
   const showAlert = () => {
     Swal.fire({
-      title: "Soy Sandra Alba, tu Abogada de Confianza!",
-      text: "¡Gracias por contactarme, revisaré tu petición y me pondré en contacto contigo.!",
+      title:
+        "¡Gracias por contactarme, revisaré tu petición y me pondré en contacto contigo.!",
       icon: "success",
       showConfirmButton: false,
-      timer: 10000,
+      timer: 6000,
     });
     // Disparar confeti
     confetti();
@@ -19,8 +19,8 @@ function SweetAlertComponent() {
     setTimeout(() => {
       showAlert(); // Mostrar la alerta
       loading.classList.add("hidden");
-      window.location.href = "https://abogadasandraalba.com"; // Redireccionar a la página deseada
-    }, 5000); // Simulación de envío de formulario durante 8 segundos
+      window.location.href = "/"; // Redireccionar a la página deseada
+    }, 10000); // Simulación de envío de formulario durante 8 segundos
     // Ahora llama a showAlert() después de que el tiempo de espera haya terminado
 
     // setTimeout(() => {}, 5000);
