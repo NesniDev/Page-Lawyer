@@ -1,54 +1,85 @@
-# Astro Starter Kit: Basics
+# ⚖️ Abogada Sandra Alba — Sitio Web Profesional
 
-```sh
-npm create astro@latest -- --template basics
+Sitio web profesional de la **Dra. Sandra Alba**, abogada litigante colombiana especializada en Derecho Laboral. Diseñado para presentar sus servicios legales, experiencia y canales de contacto.
+
+🌐 **Sitio en producción:** [abogadasandraalba.com](https://www.abogadasandraalba.com)
+
+---
+
+## 🛠️ Tech Stack
+
+| Tecnología | Uso |
+| :--- | :--- |
+| [Astro](https://astro.build) | Framework web (SSR) |
+| [TailwindCSS](https://tailwindcss.com) | Estilos utility-first |
+| [tailwindcss-animated](https://github.com/new-data-services/tailwindcss-animated) | Animaciones |
+| [Preact](https://preactjs.com) | Componentes interactivos |
+| [SweetAlert2](https://sweetalert2.github.io) | Alertas y modales |
+| [Canvas Confetti](https://www.kirilv.com/canvas-confetti/) | Efectos visuales |
+| [Vercel](https://vercel.com) | Hosting y despliegue (SSR serverless) |
+| [Google Analytics](https://analytics.google.com) | Analítica web |
+
+
+---
+
+## 🚀 Instalación y Desarrollo
+
+### Requisitos previos
+
+- [Node.js](https://nodejs.org) (v18 o superior recomendado)
+- npm
+
+### Comandos
+
+```bash
+# Instalar dependencias
+npm install
+
+# Iniciar servidor de desarrollo (localhost:4321)
+npm run dev
+
+# Compilar para producción
+npm run build
+
+# Previsualizar el build localmente
+npm run preview
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+---
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 📄 Páginas
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+| Ruta | Descripción |
+| :--- | :--- |
+| `/` | Página principal — presentación, experiencia, servicios y ubicación |
+| `/Sobre-Mi` | Información personal y trayectoria profesional |
+| `/contacto` | Formulario y datos de contacto |
+| `/Condiciones` | Términos y condiciones |
+| `/Politica` | Política de privacidad |
+| `/404` | Página de error personalizada |
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## ✨ Características
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- **SSR con Vercel** — Renderizado del lado del servidor mediante el adaptador serverless de Vercel
+- **SEO optimizado** — Meta tags, Open Graph, Twitter Cards, sitemap y robots.txt
+- **Diseño responsivo** — Adaptado para móvil, tablet y escritorio
+- **Animaciones** — Transiciones fluidas con tailwindcss-animated
+- **Contador animado** — Componente CountUp en Preact para estadísticas de experiencia
+- **Google Analytics** — Seguimiento de visitas integrado
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+---
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 📬 Contacto
 
-Any static assets, like images, can be placed in the `public/` directory.
+- **Sitio web:** [abogadasandraalba.com](https://www.abogadasandraalba.com)
+- **Email:** sandraliliana1202@hotmail.com
+- **Teléfono:** +57 322 818 1218
+- **Facebook:** [Dra. Sandra Alba](https://www.facebook.com/profile.php?id=100066769206943)
 
-## 🧞 Commands
+---
 
-All commands are run from the root of the project, from a terminal:
+## 📝 Licencia
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Este proyecto es privado y de uso exclusivo para la Dra. Sandra Alba.
